@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hackathons & Events - CodeTrack</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/hackathons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <nav class="nav-links">
+          <a href="index.html">CodeTrack</a>
+          <a href="hackathons.html" class="active">Hackathons & Events</a>
+        </nav>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="light-icon"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="next-event-section">
+          <h2>Next Event</h2>
+          <div id="next-event" class="next-event">
+            <div class="loading">No upcoming events</div>
+          </div>
+        </section>
+
+        <section class="add-event-section">
+          <h2>Add New Event</h2>
+          <div class="add-event-form">
+            <input type="text" id="event-name" placeholder="Event Name" required>
+            <input type="text" id="event-organizer" placeholder="Organizer">
+            <input type="datetime-local" id="event-start" required>
+            <input type="datetime-local" id="event-end" required>
+            <input type="url" id="event-url" placeholder="Event URL">
+            <select id="event-type">
+              <option value="hackathon">Hackathon</option>
+              <option value="workshop">Workshop</option>
+              <option value="conference">Conference</option>
+              <option value="meetup">Meetup</option>
+              <option value="other">Other</option>
+            </select>
+            <input type="text" id="event-location" placeholder="Location (Optional)">
+            <input type="text" id="event-prize" placeholder="Prize Pool (Optional)">
+            <textarea id="event-description" placeholder="Event Description"></textarea>
+            <button id="add-event-btn" class="add-event-button">Add Event</button>
+          </div>
+        </section>
+
+        <section class="filters-section">
+          <h2>Filters</h2>
+          <div class="filters">
+            <div class="filter-group">
+              <label>Event Type</label>
+              <div class="filter-options">
+                <button class="filter-btn active" data-type="all">All</button>
+                <button class="filter-btn" data-type="hackathon">Hackathons</button>
+                <button class="filter-btn" data-type="workshop">Workshops</button>
+                <button class="filter-btn" data-type="conference">Conferences</button>
+                <button class="filter-btn" data-type="meetup">Meetups</button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label>Time Range</label>
+              <div class="filter-options">
+                <button class="filter-btn active" data-time="all">All</button>
+                <button class="filter-btn" data-time="today">Today</button>
+                <button class="filter-btn" data-time="week">This Week</button>
+                <button class="filter-btn" data-time="month">This Month</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="events-section">
+          <h2>All Events</h2>
+          <div class="events-grid" id="hackathons-list">
+            <!-- Events will be added here dynamically -->
+          </div>
+        </section>
+
+        <section class="stats-section">
+          <h2>Event Statistics</h2>
+          <div class="stats-grid">
+            <div class="stat-card total-events">
+              <h3>Total Events</h3>
+              <div class="stat-value" id="total-events">0</div>
+            </div>
+            <div class="stat-card upcoming-events">
+              <h3>Upcoming Events</h3>
+              <div class="stat-value" id="upcoming-events">0</div>
+            </div>
+            <div class="stat-card this-month">
+              <h3>This Month</h3>
+              <div class="stat-value" id="this-month-events">0</div>
+            </div>
+            <div class="stat-card prize-pool">
+              <h3>Total Prize Pool</h3>
+              <div class="stat-value" id="total-prize-pool">$0</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>CodeTrack - Your Competitive Programming Contest Tracker</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/hackathons-page.js"></script>
+</body>
+</html>

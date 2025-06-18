@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContestTracker - Competitive Programming Contest Tracker</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/calendar.css" />
+  <link rel="stylesheet" href="./styles/contests.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <h1>ContestTracker</h1>
+        <a href="hackathons.html" style="text-decoration: none;"><h1>Hackathons & Events</h1>
+        </a>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="light-icon"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="next-contest-section">
+          <h2>Next Contest</h2>
+          <div id="next-contest" class="next-contest">
+            <div class="loading">Finding next contest...</div>
+          </div>
+        </section>
+
+        <section class="upcoming-section">
+          <h2>Upcoming Contests</h2>
+          <div class="upcoming-contests" id="upcoming-contests">
+            <div class="loading">Loading contest data...</div>
+          </div>
+        </section>
+
+        <section class="weekly-schedule-section">
+          <h2>Weekly Schedule</h2>
+          <div class="weekly-schedule">
+            <div class="schedule-day">
+              <h3>Sunday</h3>
+              <div class="schedule-events">
+                <div class="schedule-event leetcode">
+                  <span class="time">8:00 AM</span>
+                  <span class="name">LeetCode Weekly Contest</span>
+                </div>
+                <div class="schedule-event gfg">
+                  <span class="time">7:00 PM</span>
+                  <span class="name">GeeksforGeeks Weekly Contest</span>
+                </div>
+              </div>
+            </div>
+            <div class="schedule-day">
+              <h3>Wednesday</h3>
+              <div class="schedule-events">
+                <div class="schedule-event codechef">
+                  <span class="time">8:00 PM - 10:00 PM</span>
+                  <span class="name">CodeChef Contest</span>
+                </div>
+              </div>
+            </div>
+            <div class="schedule-day">
+              <h3>Saturday</h3>
+              <div class="schedule-events">
+                <div class="schedule-event leetcode">
+                  <span class="time">8:00 PM</span>
+                  <span class="name">LeetCode Biweekly Contest (Alternate weeks)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calendar-section">
+          <h2>Contest Calendar</h2>
+          <div class="calendar-controls">
+            <button id="prev-month" class="calendar-nav-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <h3 id="current-month">July 2025</h3>
+            <button id="next-month" class="calendar-nav-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="calendar" id="calendar">
+          </div>
+        </section>
+
+        <section class="platforms-section">
+          <h2>Platforms</h2>
+          <div class="platforms">
+            <div class="platform-card leetcode">
+              <h3>LeetCode</h3>
+              <p>Weekly: Every Sunday at 8:00 AM</p>
+              <p>Biweekly: Alternate Saturdays at 8:00 PM</p>
+              <div class="platform-contests" id="leetcode-contests"></div>
+            </div>
+            <div class="platform-card codechef">
+              <h3>CodeChef</h3>
+              <p>Every Wednesday at 8:00 PM - 10:00 PM</p>
+              <div class="platform-contests" id="codechef-contests"></div>
+            </div>
+            <div class="platform-card gfg">
+              <h3>GeeksforGeeks</h3>
+              <p>Every Sunday at 7:00 PM</p>
+              <div class="platform-contests" id="gfg-contests"></div>
+            </div>
+            <div class="platform-card codeforces">
+              <h3>Codeforces</h3>
+              <p>Schedule varies (data from API)</p>
+              <div class="platform-contests" id="codeforces-contests"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>CodeTrack - Your Competitive Programming Contest Tracker</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

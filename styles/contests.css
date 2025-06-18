@@ -1,0 +1,290 @@
+/* Contest cards styles */
+
+.next-contest-section {
+  margin-bottom: var(--space-4);
+}
+
+.next-contest {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent) 100%);
+  border-radius: 12px;
+  padding: var(--space-3);
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+}
+
+.next-contest .contest-card {
+  background: var(--bg-primary);
+  margin: 0;
+  transform: none;
+  border-left-width: 6px;
+}
+
+.next-contest .contest-card:hover {
+  transform: none;
+}
+
+.upcoming-contests {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.weekly-schedule-section {
+  margin-bottom: var(--space-4);
+}
+
+.weekly-schedule {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.schedule-day {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: var(--space-2);
+  box-shadow: var(--card-shadow);
+}
+
+.schedule-day h3 {
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.schedule-events {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.schedule-event {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+  background-color: var(--bg-primary);
+  border-radius: 6px;
+  border-left: 3px solid var(--platform-color, var(--accent));
+}
+
+.schedule-event.leetcode {
+  --platform-color: var(--leetcode);
+}
+
+.schedule-event.codechef {
+  --platform-color: var(--codechef);
+}
+
+.schedule-event.gfg {
+  --platform-color: var(--gfg);
+}
+
+.schedule-event .time {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--platform-color, var(--text-primary));
+}
+
+.schedule-event .name {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.contest-card {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: var(--space-2);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--platform-color, var(--accent));
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.contest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .contest-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-1);
+}
+
+.contest-platform {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.contest-platform span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--platform-color, var(--accent));
+  margin-right: 4px;
+}
+
+.contest-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.contest-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  color: var(--text-primary);
+}
+
+.contest-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.contest-countdown {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: var(--space-1) 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-top: auto;
+  color: var(--text-primary);
+}
+
+.dark-theme .contest-countdown {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.contest-register {
+  margin-top: var(--space-2);
+  text-align: center;
+}
+
+.register-btn {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  background: none;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Platform-specific sections */
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.platform-card {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: var(--space-3);
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--platform-color, var(--accent));
+}
+
+.platform-card h3 {
+  color: var(--platform-color, var(--text-primary));
+}
+
+.platform-card.leetcode {
+  --platform-color: var(--leetcode);
+}
+
+.platform-card.codechef {
+  --platform-color: var(--codechef);
+}
+
+.platform-card.gfg {
+  --platform-color: var(--gfg);
+}
+
+.platform-card.codeforces {
+  --platform-color: var(--codeforces);
+}
+
+.platform-contests {
+  margin-top: var(--space-2);
+}
+
+.platform-contest-item {
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.platform-contest-item:last-child {
+  border-bottom: none;
+}
+
+.platform-contest-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.platform-contest-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Contest card platform colors */
+.contest-card.leetcode {
+  --platform-color: var(--leetcode);
+}
+
+.contest-card.codechef {
+  --platform-color: var(--codechef);
+}
+
+.contest-card.gfg {
+  --platform-color: var(--gfg);
+}
+
+.contest-card.codeforces {
+  --platform-color: var(--codeforces);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .upcoming-contests, .platforms, .weekly-schedule {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-2);
+  }
+  
+  .contest-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upcoming-contests, .platforms, .weekly-schedule {
+    grid-template-columns: 1fr;
+  }
+}

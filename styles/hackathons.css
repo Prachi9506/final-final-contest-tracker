@@ -1,0 +1,435 @@
+/* Hackathons page styles */
+
+.nav-links {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a.active {
+  color: var(--hackathon);
+}
+
+.next-event {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--hackathon) 100%);
+  border-radius: 12px;
+  padding: var(--space-3);
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.next-event .event-card {
+  background: var(--bg-primary);
+  margin: 0;
+  transform: none;
+  border-left-width: 6px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-3) 0;
+  padding: var(--space-2);
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: var(--space-2);
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.countdown-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--hackathon);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add-event-section {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  box-shadow: var(--card-shadow);
+}
+
+.add-event-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-2);
+  background-color: var(--bg-primary);
+  padding: var(--space-3);
+  border-radius: 8px;
+}
+
+.add-event-form input,
+.add-event-form textarea,
+.add-event-form select {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-event-form input:focus,
+.add-event-form textarea:focus,
+.add-event-form select:focus {
+  outline: none;
+  border-color: var(--hackathon);
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.1);
+}
+
+.add-event-form textarea {
+  grid-column: 1 / -1;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.add-event-button {
+  grid-column: 1 / -1;
+  background-color: var(--hackathon);
+  color: white;
+  border: none;
+  padding: var(--space-2);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.add-event-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.add-event-button:active {
+  transform: translateY(0);
+}
+
+.filters-section {
+  margin-bottom: var(--space-4);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.filter-group {
+  background-color: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filter-btn {
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  border-color: var(--hackathon);
+  color: var(--hackathon);
+}
+
+.filter-btn.active {
+  background-color: var(--hackathon);
+  border-color: var(--hackathon);
+  color: white;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.event-card {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: var(--space-3);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .event-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.event-card.featured {
+  border: 2px solid var(--hackathon);
+}
+
+.event-type-badge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--hackathon);
+  color: white;
+}
+
+.event-card h3 {
+  color: var(--hackathon);
+  margin: var(--space-3) 0 var(--space-2);
+  font-size: 1.25rem;
+}
+
+.event-organizer {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.event-dates {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  padding: var(--space-2);
+  background-color: var(--bg-primary);
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.event-location {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.event-description {
+  color: var(--text-secondary);
+  margin: var(--space-2) 0;
+  line-height: 1.6;
+}
+
+.event-prize {
+  font-weight: 500;
+  color: var(--hackathon);
+  margin: var(--space-2) 0;
+  padding: var(--space-1) var(--space-2);
+  background-color: rgba(147, 51, 234, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.event-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.event-url {
+  display: inline-block;
+  color: var(--hackathon);
+  text-decoration: none;
+  font-size: 0.875rem;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--hackathon);
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.event-url:hover {
+  background-color: var(--hackathon);
+  color: white;
+}
+
+.delete-event-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: opacity 0.3s;
+}
+
+.delete-event-btn:hover {
+  opacity: 0.9;
+}
+
+.stats-section {
+  margin-bottom: var(--space-4);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+
+.stat-card {
+  background-color: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.stat-card h3 {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--hackathon);
+}
+
+.no-events {
+  text-align: center;
+  padding: var(--space-4);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Event type specific styles */
+.event-card.hackathon .event-type-badge { background-color: var(--hackathon); }
+.event-card.workshop .event-type-badge { background-color: #2563eb; }
+.event-card.conference .event-type-badge { background-color: #059669; }
+.event-card.meetup .event-type-badge { background-color: #dc2626; }
+.event-card.other .event-type-badge { background-color: #6b7280; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: var(--space-2);
+  }
+  
+  .countdown {
+    flex-wrap: wrap;
+  }
+  
+  .countdown-unit {
+    min-width: 60px;
+  }
+  
+  .countdown-value {
+    font-size: 1.5rem;
+  }
+  
+  .add-event-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .event-actions {
+    flex-direction: column;
+  }
+  
+  .event-url, .delete-event-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    font-size: 0.875rem;
+  }
+  
+  .countdown-unit {
+    min-width: 50px;
+    padding: var(--space-1);
+  }
+  
+  .countdown-value {
+    font-size: 1.25rem;
+  }
+  
+  .event-card {
+    padding: var(--space-2);
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-options {
+    flex-direction: column;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
