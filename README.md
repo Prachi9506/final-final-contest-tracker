@@ -44,6 +44,5 @@
 - LocalStorage for theme persistence
 - Responsive layout using Flexbox & Grid
 - Intersection Observer for animations & lazy loading
-
 ---
 
