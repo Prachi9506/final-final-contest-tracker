@@ -5,7 +5,7 @@
   
 ---
 
-## 📌 Features
+## 📌 Features 
 
 ### 📅 Contest Dashboard
 - Live and upcoming contests from:
