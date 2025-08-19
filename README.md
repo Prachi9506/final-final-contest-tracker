@@ -47,9 +47,3 @@
 
 ---
 
-## 📷 Screenshots
-
-> *Add screenshots or GIFs here to showcase your project UI!*
-
----
-
