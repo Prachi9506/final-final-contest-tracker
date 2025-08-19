@@ -30,7 +30,7 @@
 ### 🌙 Theme Toggle
 - Dark/Light mode toggle with saved preference
 
-### 📈 Optimizations & UX
+### 📈 Optimizations & UX 
 - Lazy loading for better performance
 - Smooth scroll, hover effects, and animations
 - Responsive & mobile-friendly
