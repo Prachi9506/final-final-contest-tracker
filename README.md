@@ -2,7 +2,7 @@
 
 **Your one-stop solution to track Competitive Programming contests and Tech Events.**
 
-
+ 
 ---
 
 ## 📌 Features
