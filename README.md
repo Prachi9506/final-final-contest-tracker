@@ -13,7 +13,7 @@
   - **Codeforces**
   - **CodeChef**
   - **GeeksforGeeks**
-- **Weekly schedule** view
+- **Weekly schedule** view 
 - **Monthly calendar** to visualize all contests
 - **Next upcoming contest** card with countdown
 
