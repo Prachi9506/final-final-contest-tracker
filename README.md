@@ -2,7 +2,6 @@
 
 **Your one-stop solution to track Competitive Programming contests and Tech Events.**
 
-![Made with HTML, CSS, JavaScript](https://img.shields.io/badge/Made%20with-HTML%2FCSS%2FJS-orange)
 
 ---
 
