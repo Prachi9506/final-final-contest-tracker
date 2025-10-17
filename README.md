@@ -37,12 +37,3 @@
 - Parallax effects for larger screens
 
 ---
-
-## 🛠 Tech Stack
-
-- **HTML, CSS, JavaScript**
-- LocalStorage for theme persistence
-- Responsive layout using Flexbox & Grid
-- Intersection Observer for animations & lazy loading
----
-
